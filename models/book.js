@@ -1,4 +1,5 @@
-const { Mongoose, Schema } = require("mongoose");
+const { Schema } = require("mongoose");
+const mongoose = require("mongoose");
 
 const bookSchema = new Schema({
   title: { type: String, required: true },
@@ -21,6 +22,6 @@ const bookSchema = new Schema({
   genre: { type: String, default: "Other" }
 });
 
-const Book = Mongoose.model("Book", bookSchema);
+const Book = mongoose.model("Book", bookSchema);
 
 module.exports = { Book };

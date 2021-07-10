@@ -1,4 +1,5 @@
-const { Mongoose, Schema } = require("mongoose");
+const { Schema } = require("mongoose");
+const mongoose = require("mongoose");
 
 const authorSchema = new Schema({
   firstName: { type: String, required: true },
@@ -13,6 +14,6 @@ const authorSchema = new Schema({
   about: { type: String, required: true }
 });
 
-const Author = Mongoose.model("Author", authorSchema);
+const Author = mongoose.model("Author", authorSchema);
 
 module.exports = { Author };

@@ -1,4 +1,5 @@
-const { Mongoose, Schema } = require("mongoose");
+const { Schema } = require("mongoose");
+const mongoose = require("mongoose");
 
 const userSchema = new Schema({
   firstName: { type: String, required: true },
@@ -14,6 +15,6 @@ const userSchema = new Schema({
   isAdmin: { type: Boolean, default: false }
 });
 
-const User = Mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
 
 module.exports = { User };

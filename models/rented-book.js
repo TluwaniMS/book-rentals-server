@@ -1,4 +1,5 @@
-const { Mongoose, Schema } = require("mongoose");
+const { Schema } = require("mongoose");
+const mongoose = require("mongoose");
 
 const rentedBookSchema = new Schema({
   dateRented: { type: Date, default: Date.now },
@@ -14,6 +15,6 @@ const rentedBookSchema = new Schema({
   quantity: { type: Number, required: true }
 });
 
-const RentedBook = Mongoose.model("RentedBook", rentedBookSchema);
+const RentedBook = mongoose.model("RentedBook", rentedBookSchema);
 
 module.exports = { RentedBook };
