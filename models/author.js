@@ -1,0 +1,18 @@
+const { Mongoose, Schema } = require("mongoose");
+
+const authorSchema = new Schema({
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true },
+  image: { type: String, required: false },
+  books: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Book"
+    }
+  ],
+  about: { type: String, required: true }
+});
+
+const Author = Mongoose.model("Author", authorSchema);
+
+module.exports = { Author };
