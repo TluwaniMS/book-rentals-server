@@ -8,7 +8,6 @@ const bookSchema = new Schema({
     ref: "Author"
   },
   isbn: { type: String, required: true },
-  image: { type: String, required: true },
   aboutBook: { type: String, required: true },
   quantityAvailable: { type: Number, required: true },
   outOfStock: { type: Boolean, required: true, default: false },

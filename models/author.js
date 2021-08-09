@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const authorSchema = new Schema({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
-  image: { type: String, required: false },
   books: [
     {
       type: Schema.Types.ObjectId,
