@@ -7,7 +7,7 @@ const bookSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Author"
   },
-  isbn: { type: String, required: true },
+  isbn: { type: Number, required: true },
   aboutBook: { type: String, required: true },
   quantityAvailable: { type: Number, required: true },
   outOfStock: { type: Boolean, required: true, default: false },
