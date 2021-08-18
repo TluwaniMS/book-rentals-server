@@ -3,6 +3,9 @@ const { createSampleBooks } = require("./books-migration-scripts");
 const { createSampleComments } = require("./comments-migration-scripts");
 const { createSampleGenres } = require("./genre-migration-scripts");
 const {
+  createSampleUsers
+} = require("../migration-scripts/users-migration-scripts");
+const {
   linkAuthorsToBooks,
   linkBooksToAuthors
 } = require("../migration-script-services/authors-and-books-relationship-script-service");
@@ -18,7 +21,8 @@ async function creatingMainDocumentsWithoutRelationships() {
     createSampleGenres(),
     createSampleComments(),
     createSampleBooks(),
-    createSampleAuthors()
+    createSampleAuthors(),
+    createSampleUsers()
   ])
     .then(() => {
       console.log("Main documents created successfully...");
