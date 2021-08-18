@@ -15,6 +15,7 @@ const {
 const {
   linkUsersToComments
 } = require("../migration-script-services/users-and-comments-script-services");
+const { User } = require("../models/user");
 
 async function creatingMainDocumentsWithoutRelationships() {
   Promise.all([
@@ -47,7 +48,17 @@ async function creatingMainDocumentRelationships() {
     });
 }
 
+async function populatingDatabaseWithSampleData() {
+  const users = await User.find({});
+
+  if (users.length > 0) {
+    console.log("Database is already populated...");
+  } else {
+    await creatingMainDocumentRelationships();
+    await creatingMainDocumentsWithoutRelationships();
+  }
+}
+
 module.exports = {
-  creatingMainDocumentsWithoutRelationships,
-  creatingMainDocumentRelationships
+  populatingDatabaseWithSampleData
 };
