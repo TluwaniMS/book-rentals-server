@@ -22,3 +22,5 @@ function extractCommentById(commentId) {
 
   return comment;
 }
+
+module.exports = { linkCommentsToBooks };
