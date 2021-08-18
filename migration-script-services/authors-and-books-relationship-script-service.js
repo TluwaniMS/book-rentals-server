@@ -20,7 +20,7 @@ async function dbQueryRunnerForLinkingBooksToAuthors(authorId, bookIds) {
 }
 
 function extractBookById(bookId) {
-  const book = books.filter((book) => book.id === bookId)[0];
+  const book = books.filter((book) => book._id === bookId)[0];
 
   return book;
 }
@@ -39,7 +39,7 @@ async function dbQueryRunnerForLinkingAuthorsToBooks(authorId, bookIds) {
 }
 
 function extractAuthorById(authorId) {
-  const author = authors.filter((user) => user.id === authorId)[0];
+  const author = authors.filter((user) => user._id === authorId)[0];
 
   return author;
 }

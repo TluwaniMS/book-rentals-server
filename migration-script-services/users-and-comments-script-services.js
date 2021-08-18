@@ -18,7 +18,7 @@ async function dbQueryRunnerForLinkingUsersToComments(userId, commentIds) {
 }
 
 function extractUserById(userId) {
-  const linkedUser = users.filter((user) => user.id === userId);
+  const linkedUser = users.filter((user) => user._id === userId);
 
   return linkedUser;
 }

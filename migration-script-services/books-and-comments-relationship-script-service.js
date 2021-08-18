@@ -18,7 +18,7 @@ async function dbQueryRunnerForLinkingCommentsToBooks(bookId, commentIds) {
 }
 
 function extractCommentById(commentId) {
-  const comment = comments.filter((review) => review.id === commentId)[0];
+  const comment = comments.filter((review) => review._id === commentId)[0];
 
   return comment;
 }
