@@ -18,7 +18,8 @@ const bookSchema = new Schema({
     }
   ],
   rating: { type: Number, default: 0 },
-  genre: { type: String, default: "Other" }
+  genre: { type: String, default: "Other" },
+  isArchived: { type: Boolean, default: false }
 });
 
 const Book = mongoose.model("Book", bookSchema);
