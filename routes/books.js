@@ -17,7 +17,7 @@ router.get(
   errorHandler(async (req, res) => {
     const { bookId } = req.params;
 
-    const book = Book.find({ _id: bookId });
+    const book = await Book.find({ _id: bookId });
 
     res.status(200).send({ data: book });
   })
@@ -28,7 +28,7 @@ router.get(
   errorHandler(async (req, res) => {
     const { genre } = req.params;
 
-    const books = Book.find({ genre: genre });
+    const books = await Book.find({ genre: genre });
 
     res.status(200).send({ data: books });
   })
