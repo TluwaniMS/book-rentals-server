@@ -12,9 +12,6 @@ const {
 const {
   linkCommentsToBooks
 } = require("../migration-script-services/books-and-comments-relationship-script-service");
-const {
-  linkUsersToComments
-} = require("../migration-script-services/users-and-comments-script-services");
 const { User } = require("../models/user");
 
 async function creatingMainDocumentsWithoutRelationships() {
@@ -37,8 +34,7 @@ async function creatingMainDocumentRelationships() {
   Promise.all([
     linkAuthorsToBooks(),
     linkBooksToAuthors(),
-    linkCommentsToBooks(),
-    linkUsersToComments()
+    linkCommentsToBooks()
   ])
     .then(() => {
       console.log("Document relationships created successfully...");
