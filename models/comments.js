@@ -5,10 +5,9 @@ const commentSchema = new Schema({
   comment: { type: String, required: true },
   rating: { type: Number, required: false, default: 0 },
   date: { type: Date, default: Date.now },
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: "User"
-  }
+  userId: { type: String, required: true },
+  userName: { type: String, required: true },
+  userLastname: { type: String, required: true }
 });
 
 const Comment = mongoose.model("Comment", commentSchema);
