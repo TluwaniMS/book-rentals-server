@@ -6,7 +6,7 @@ const { Book } = require("../models/book");
 router.get(
   "/get-all-books",
   errorHandler(async (req, res) => {
-    const books = await Book.find({});
+    const books = await Book.find({}).populate("comments");
 
     res.status(200).send({ data: books });
   })
@@ -17,7 +17,7 @@ router.get(
   errorHandler(async (req, res) => {
     const { bookId } = req.params;
 
-    const book = await Book.find({ _id: bookId });
+    const book = await Book.find({ _id: bookId }).populate("comments");
 
     res.status(200).send({ data: book });
   })
@@ -28,7 +28,7 @@ router.get(
   errorHandler(async (req, res) => {
     const { genre } = req.params;
 
-    const books = await Book.find({ genre: genre });
+    const books = await Book.find({ genre: genre }).populate("comments");
 
     res.status(200).send({ data: books });
   })
@@ -39,7 +39,7 @@ router.get(
   errorHandler(async (req, res) => {
     const { rating } = req.params;
 
-    const books = await Book.find({ rating: rating });
+    const books = await Book.find({ rating: rating }).populate("comments");
 
     res.status(200).send({ data: books });
   })
