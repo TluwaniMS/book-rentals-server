@@ -49,6 +49,12 @@ router.get(
   "/get-books-by-author/:authorId",
   errorHandler(async (req, res) => {
     const { authorId } = req.params;
+
+    const booksByAuthor = await Book.find({
+      author: { $in: [authorId] }
+    });
+
+    res.status(200).send({ data: booksByAuthor });
   })
 );
 
