@@ -22,8 +22,9 @@ async function creatingMainDocumentsWithoutRelationships() {
     createSampleAuthors(),
     createSampleUsers()
   ])
-    .then(() => {
+    .then(async () => {
       console.log("Main documents created successfully...");
+      await creatingMainDocumentRelationships();
     })
     .catch((error) => {
       console.log(error.message);
@@ -50,7 +51,6 @@ async function populatingDatabaseWithSampleData() {
   if (users.length > 0) {
     console.log("Database is already populated...");
   } else {
-    await creatingMainDocumentRelationships();
     await creatingMainDocumentsWithoutRelationships();
   }
 }
