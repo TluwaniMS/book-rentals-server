@@ -62,6 +62,21 @@ router.put(
   "/update-book/:bookId",
   errorHandler(async (req, res) => {
     const { bookId } = req.params;
+    const { title, aboutBook, genre, quantityAvailable } = req.body;
+
+    await Book.updateOne(
+      { _id: bookId },
+      {
+        $set: {
+          title: title,
+          aboutBook: aboutBook,
+          genre: genre,
+          quantityAvailable: quantityAvailable
+        }
+      }
+    );
+
+    res.status(200).send({ success: true });
   })
 );
 
