@@ -18,6 +18,14 @@ router.put(
   "/update-user-info/:userId",
   errorHandler(async (req, res) => {
     const { userId } = req.params;
+    const { firstName, lastName, email } = req.body;
+
+    await User.updateOne(
+      { _id: userId },
+      { $set: { firstName: firstName, lastName: lastName, email: email } }
+    );
+
+    res.status(200).send({ success: true });
   })
 );
 
