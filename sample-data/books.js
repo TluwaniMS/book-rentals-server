@@ -6,7 +6,8 @@ const books = [
     aboutBook:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     quantityAvailable: 5,
-    genre: "Action and Adventure"
+    genre: "Action and Adventure",
+    rating: 3
   },
   {
     _id: "6118f7547ae5a425c81dfb55",
@@ -15,7 +16,8 @@ const books = [
     aboutBook:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     quantityAvailable: 8,
-    genre: "Classics"
+    genre: "Classics",
+    rating: 3.5
   },
   {
     _id: "6118f7547ae5a425c81dfb56",
@@ -24,7 +26,8 @@ const books = [
     aboutBook:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     quantityAvailable: 2,
-    genre: "Fantasy"
+    genre: "Fantasy",
+    rating: 3
   },
   {
     _id: "6118f7547ae5a425c81dfb57",
@@ -33,7 +36,8 @@ const books = [
     aboutBook:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     quantityAvailable: 4,
-    genre: "Detective and Mystery"
+    genre: "Detective and Mystery",
+    rating: 4
   },
   {
     _id: "6118f7547ae5a425c81dfb58",
@@ -42,7 +46,8 @@ const books = [
     aboutBook:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     quantityAvailable: 6,
-    genre: "Historical Fiction"
+    genre: "Historical Fiction",
+    rating: 4
   },
   {
     _id: "6118f7547ae5a425c81dfb59",
@@ -51,7 +56,8 @@ const books = [
     aboutBook:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     quantityAvailable: 3,
-    genre: "Horror"
+    genre: "Horror",
+    rating: 4
   },
   {
     _id: "6118f7547ae5a425c81dfb5a",
@@ -60,7 +66,8 @@ const books = [
     aboutBook:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     quantityAvailable: 12,
-    genre: "Essays"
+    genre: "Essays",
+    rating: 4
   },
   {
     _id: "6118f7547ae5a425c81dfb5b",
@@ -69,7 +76,8 @@ const books = [
     aboutBook:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     quantityAvailable: 9,
-    genre: "Classics"
+    genre: "Classics",
+    rating: 5
   },
   {
     _id: "6118f7547ae5a425c81dfb5c",
@@ -78,7 +86,8 @@ const books = [
     aboutBook:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     quantityAvailable: 4,
-    genre: "Romance"
+    genre: "Romance",
+    rating: 4
   },
   {
     _id: "6118f7547ae5a425c81dfb5d",
