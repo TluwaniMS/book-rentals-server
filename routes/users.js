@@ -4,6 +4,15 @@ const { errorHandler } = require("../middleware/error-handler");
 const { User } = require("../models/user");
 
 router.get(
+  "/get-all-users/",
+  errorHandler(async (req, res) => {
+    const users = await User.find({});
+
+    res.status(200).send({ data: users });
+  })
+);
+
+router.get(
   "/get-user/:userId",
   errorHandler(async (req, res) => {
     const { userId } = req.params;
