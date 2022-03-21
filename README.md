@@ -3,6 +3,10 @@
 # About Repository:
 This is a basic node-js server.
 
+# Software(s) required:
+* Latest stable version of Node Package Manager
+* MongoDB Database
+
 # Dependencies:
 * CORS
 * DOTENV
